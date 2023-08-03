@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ModerationSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+  </listeners>
+  <test thread-count="5" name="Audio Moderation Page Cases(failed)">
+    <classes>
+      <class name="com.pom.testcases.TestAudioModerationPage">
+        <methods>
+          <include name="testaudiomoderation"/>
+        </methods>
+      </class> <!-- com.pom.testcases.TestAudioModerationPage -->
+    </classes>
+  </test> <!-- Audio Moderation Page Cases(failed) -->
+  <test thread-count="5" name="Visual Moderation Page Cases(failed)">
+    <classes>
+      <class name="com.pom.testcases.TestVisualModerationPage">
+        <methods>
+          <include name="testvisualmoderation"/>
+        </methods>
+      </class> <!-- com.pom.testcases.TestVisualModerationPage -->
+    </classes>
+  </test> <!-- Visual Moderation Page Cases(failed) -->
+  <test thread-count="5" name="Model Demo Page Cases(failed)">
+    <classes>
+      <class name="com.pom.testcases.TestVisualModerationPage">
+        <methods>
+          <include name="testvisualmoderation"/>
+        </methods>
+      </class> <!-- com.pom.testcases.TestVisualModerationPage -->
+    </classes>
+  </test> <!-- Model Demo Page Cases(failed) -->
+</suite> <!-- Failed suite [ModerationSuite] -->
