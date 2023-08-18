@@ -11,6 +11,10 @@ public class ReviewFeedPage extends TestBase{
 	By quickView = By.xpath("//*[local-name() = 'svg' and @width = '16']/*[local-name() ='path'][1]");
 	By postId = By.xpath("//div[@text = 'Automation_Test_PostID_1']");
 	By postFeed = By.xpath("//div[@data-id='PostFeedId']");
+	By CreateNew = By.xpath("//span[text() = '+ Create New']");
+	By feedName = By.xpath("//input[@placeholder = 'Enter Feed Name']");
+	By createButton = By.xpath("//span[text() = 'Create']");
+	
 	
 	public   String clickReviewFeed()
 	{
@@ -50,6 +54,18 @@ public String getFlaggedPostText()
 	    String postID = driver.findElement(postId).getText();
 	    System.out.println(postID);
             return postID;
+	}
+	
+	public void clickCreateNewPostFeed()
+	{
+		driver.findElement(CreateNew).click();
+	}
+	
+	public void createNewPostFeed()
+	{
+		driver.findElement(feedName).sendKeys("AutoPostFeed");
+		driver.findElement(createButton).click();
+		
 	}
 }
 

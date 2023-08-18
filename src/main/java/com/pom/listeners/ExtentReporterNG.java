@@ -22,7 +22,7 @@ static ExtentReports report;
 @BeforeClass
 public void startTest()
 {
-report = new ExtentReports(System.getProperty("C:\\Users\\umesh Jaiswal\\OneDrive\\Desktop\\Auto\\Framework\\ArbiterProjectV.1\\test-output")+"ExtentReportResult.html");
+report = new ExtentReports(System.getProperty("user.dir")+"ExtentReportResult.html");
 test = report.startTest("Arbiter");
 }
 

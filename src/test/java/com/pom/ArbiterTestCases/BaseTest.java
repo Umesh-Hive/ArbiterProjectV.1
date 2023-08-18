@@ -11,6 +11,7 @@ import org.testng.annotations.BeforeTest;
 import com.pom.base.TestBase;
 import com.pom.pages.ActionsPage;
 import com.pom.pages.AnalyticsPage;
+import com.pom.pages.GuidelinesPage;
 import com.pom.pages.ModerationLogpage;
 import com.pom.pages.ReviewFeedPage;
 import com.pom.pages.RulesPage;
@@ -44,11 +45,12 @@ public class BaseTest {
 	TestBase base = new TestBase();
     SpamManagerPage spam = new SpamManagerPage();
    workspace ws = new workspace();
+   GuidelinesPage guide = new GuidelinesPage();
 
     @BeforeClass
     public void startTest()  throws InterruptedException  {
         //Log.info("Tests is starting!");
-    	report = new ExtentReports(System.getProperty("user.dir")+"ExtentReportResults.html");
+    	report = new ExtentReports(System.getProperty("C:\\Users\\umesh Jaiswal\\OneDrive\\Desktop\\Auto\\Framework\\ArbiterProjectV.1\\ArbiterTestReport")+"ArbiterTestReport\\GeneralSiteHealthCheckup\\ExtentReportResults.html");
     	test = report.startTest("Arbiter Test Cases");
     	}
     
@@ -67,14 +69,16 @@ public class BaseTest {
     	
     	//********Launch Arbiter Dashboard*********// 
     	signInBtn.browserLaunch();
+    
 		signInBtn.SignIn();
 		base.ImplicitWait();
 		//Thread.sleep(3000);
-		cmnPage.clickDismissReleaseNotes();
+		//cmnPage.clickDismissReleaseNotes();
 		Thread.sleep(3000);
 		//base.clickOutsideNotification();
 		//cmnPage.selectMain333app();
 		cmnPage.selectSanityChecklistApp();
+		//signInBtn.setZoomLevel();
 		//cmnPage.clickOutsideOnThePage();
 		base.clickOutside();
     }

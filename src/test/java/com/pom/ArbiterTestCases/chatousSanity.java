@@ -142,7 +142,24 @@ public class chatousSanity  extends BaseTest {
 		Thread.sleep(2000);
 	}
 	
+	
 	@Test (priority = 9)
+
+	public void verifyGuidelinePageRedirections() throws InterruptedException  {
+		try {
+		String getUrl = guide.clickGuidelines();
+		String dataOnSpam = guide.getDataOnPage();
+		Assert.assertNotNull(dataOnSpam);
+		Assert.assertEquals(getUrl, "https://dashboard.hivemoderation.com/app/40tW5G39pOcE0BbnfQeg1s/guidelines" );
+		test.log(LogStatus.PASS, "Case 9: Guidelines page - after click on Guideline, It should redirect to correct webpage with available data");
+	}
+	
+	catch (AssertionError e){
+		test.log(LogStatus.FAIL, "Case 9: Guidelines page - after click on Guideline, It should redirect to correct webpage with available data");
+	}
+	}
+		
+	@Test (priority = 10)
 
 	public void verifySpammanagerPageRedirections() throws InterruptedException  {
 		try {
@@ -156,7 +173,7 @@ public class chatousSanity  extends BaseTest {
 	catch (AssertionError e){
 		test.log(LogStatus.FAIL, "Case 9: Spam Manager page  - after click on Spam manager,  It should redirect to correct webpage with available data");
 	}
-		
+		//hi
 		
 	}
 }

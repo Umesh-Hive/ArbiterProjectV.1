@@ -8,17 +8,11 @@
     <classes>
       <class name="com.pom.ArbiterTestCases.chatousSanity">
         <methods>
-          <include name="verifyActionPageRedirections"/>
-          <include name="verifyRulesPageRedirections"/>
           <include name="verifyThresholdPageRedirections"/>
-          <include name="verifyModerationlogRedirections"/>
           <include name="methodLevelSetup"/>
           <include name="verifySpammanagerPageRedirections"/>
-          <include name="verifyContentRedirections"/>
           <include name="endTest"/>
-          <include name="verifyReviewFeedPageRedirections"/>
           <include name="startTest"/>
-          <include name="verifyUserPageRedirections"/>
           <include name="verifyAnalyticsRedirections"/>
         </methods>
       </class> <!-- com.pom.ArbiterTestCases.chatousSanity -->
