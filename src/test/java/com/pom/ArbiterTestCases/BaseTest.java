@@ -1,11 +1,8 @@
 package com.pom.ArbiterTestCases;
 
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import com.pom.base.TestBase;
@@ -46,6 +43,7 @@ public class BaseTest {
     SpamManagerPage spam = new SpamManagerPage();
    workspace ws = new workspace();
    GuidelinesPage guide = new GuidelinesPage();
+   PostRequest post = new PostRequest();
 
     @BeforeClass
     public void startTest()  throws InterruptedException  {
@@ -59,17 +57,17 @@ public class BaseTest {
     	System.setProperty("webdriver.http.factory", "jdk-http-client");
     	
     	//*********Send Data via postman*************//
-    	signInBtn.postmanLaunch();
-    	ws.signInPostman();
-    	base.ImplicitWait();
-    	ws.clickAutoCollection();
-    	ws.clickProdSyncImage();
-    	ws.clickSendButton();
-    	Thread.sleep(3000);
+//    	signInBtn.postmanLaunch();
+//    	ws.signInPostman();
+//    	base.ImplicitWait();
+//    	ws.clickAutoCollection();
+//    	ws.clickProdSyncImage();
+//    	ws.clickSendButton();
+//    	Thread.sleep(3000);
+    //	post.post_request();
     	
     	//********Launch Arbiter Dashboard*********// 
     	signInBtn.browserLaunch();
-    
 		signInBtn.SignIn();
 		base.ImplicitWait();
 		//Thread.sleep(3000);

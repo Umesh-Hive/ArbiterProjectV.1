@@ -2,10 +2,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Arbiter Suite">
 
-<listeners>
-    <listener class-name="com.pom.listeners.ExtentReporterNG" />
-    
-  </listeners>
 
   <test name="Arbiter Cases">
     <classes>

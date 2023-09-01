@@ -167,13 +167,13 @@ public class chatousSanity  extends BaseTest {
 		String dataOnSpam = spam.getDataOnPage();
 		Assert.assertNotNull(dataOnSpam);
 		Assert.assertEquals(getUrl, "https://dashboard.hivemoderation.com/app/40tW5G39pOcE0BbnfQeg1s/spam-manager" );
-		test.log(LogStatus.PASS, "Case 9: Spam Manager page - after click on Spam manager, It should redirect to correct webpage with available data");
+		test.log(LogStatus.PASS, "Case 10: Spam Manager page - after click on Spam manager, It should redirect to correct webpage with available data");
 	}
 	
 	catch (AssertionError e){
-		test.log(LogStatus.FAIL, "Case 9: Spam Manager page  - after click on Spam manager,  It should redirect to correct webpage with available data");
+		test.log(LogStatus.FAIL, "Case 10: Spam Manager page  - after click on Spam manager,  It should redirect to correct webpage with available data");
 	}
-		//hi
+		
 		
 	}
 }

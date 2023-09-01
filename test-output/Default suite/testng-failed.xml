@@ -3,11 +3,23 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pom.ArbiterTestCases.PostRequest">
+      <class name="com.pom.ArbiterTestCases.chatousSanity">
         <methods>
-          <include name="post_request"/>
+          <include name="verifyRulesPageRedirections"/>
+          <include name="verifyActionPageRedirections"/>
+          <include name="verifyThresholdPageRedirections"/>
+          <include name="verifyGuidelinePageRedirections"/>
+          <include name="verifyModerationlogRedirections"/>
+          <include name="methodLevelSetup"/>
+          <include name="verifySpammanagerPageRedirections"/>
+          <include name="verifyContentRedirections"/>
+          <include name="endTest"/>
+          <include name="verifyReviewFeedPageRedirections"/>
+          <include name="startTest"/>
+          <include name="verifyAnalyticsRedirections"/>
+          <include name="verifyUserPageRedirections"/>
         </methods>
-      </class> <!-- com.pom.ArbiterTestCases.PostRequest -->
+      </class> <!-- com.pom.ArbiterTestCases.chatousSanity -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
