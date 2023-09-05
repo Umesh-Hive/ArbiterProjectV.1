@@ -57,17 +57,18 @@ public class BaseTest {
     	System.setProperty("webdriver.http.factory", "jdk-http-client");
     	
     	//*********Send Data via postman*************//
-//    	signInBtn.postmanLaunch();
+  //	signInBtn.postmanLaunch();
 //    	ws.signInPostman();
 //    	base.ImplicitWait();
 //    	ws.clickAutoCollection();
 //    	ws.clickProdSyncImage();
 //    	ws.clickSendButton();
 //    	Thread.sleep(3000);
-    //	post.post_request();
+   // post.post_request();
     	
     	//********Launch Arbiter Dashboard*********// 
     	signInBtn.browserLaunch();
+    	signInBtn.LaunchModerationDashboard();
 		signInBtn.SignIn();
 		base.ImplicitWait();
 		//Thread.sleep(3000);

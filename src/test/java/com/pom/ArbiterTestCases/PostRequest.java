@@ -7,6 +7,8 @@ import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 
+import io.restassured.builder.RequestSpecBuilder;
+
 
 public class PostRequest {
 	@Test
@@ -15,6 +17,11 @@ public class PostRequest {
     {
 		//int test = 1;
    
+	//.........................javascript................
+		
+		            
+		
+		
     String jsonString =  "{\n" +
             "  \"patron_id\": \"AutoUser\",\n" +
             "  \"post_id\": \"AutoPost\",\n" +
@@ -41,6 +48,7 @@ public class PostRequest {
     */
     request.header("Authorization", "token 2flaSSfWXfXhMoDbWtulmR");
     request.body(jsonString);
+    
    
     /*
     	Calling POST method on URI. After hitting, we get Response

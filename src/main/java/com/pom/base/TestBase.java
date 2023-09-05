@@ -81,7 +81,9 @@ public class TestBase {
 					System.getProperty("user.dir") + "\\src\\test\\resources\\executables\\chromedriver.exe");
 			driver = new ChromeDriver();
 		}
+		}
 
+		public void LaunchModerationDashboard() {
 		driver.get(config.getProperty("url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Integer.parseInt(config.getProperty("implicitime")),TimeUnit.SECONDS);
